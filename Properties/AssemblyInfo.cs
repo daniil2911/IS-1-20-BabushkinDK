@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("IS-1-20-BabushkinDK")]
+[assembly: AssemblyTitle("IS1-20-BabushkinDK")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IS-1-20-BabushkinDK")]
+[assembly: AssemblyProduct("IS1-20-BabushkinDK")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("1f85873d-d86d-4065-958a-6592508446ad")]
+[assembly: Guid("e34b825e-5e2a-4e0d-b32f-a62aa1f26228")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

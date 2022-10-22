@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace IS_1_20_BabushkinDK.Properties
+namespace IS1_20_BabushkinDK.Properties
 {
     /// <summary>
     ///   Класс ресурсов со строгим типом для поиска локализованных строк и пр.
@@ -43,7 +43,7 @@ namespace IS_1_20_BabushkinDK.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("IS_1_20_BabushkinDK.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("IS1_20_BabushkinDK.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
