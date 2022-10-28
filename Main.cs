@@ -37,7 +37,6 @@ namespace IS1_20_BabushkinDK
                 metroLabel1.Text = Auth.auth_id;
                 metroLabel1.Text = Auth.auth_fio;
                 metroLabel1.Text = $"Здравствуйте, {Auth.auth_fio}";
-                metroLabel2.Text = $"Успешно";
                 //Красим текст в label в зелёный цвет
             }
             //иначе
@@ -46,6 +45,18 @@ namespace IS1_20_BabushkinDK
                 //Закрываем форму
                 this.Close();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Сокрытие текущей формы
+            this.Hide();
+            //Инициализируем и вызываем форму диалога авторизации
+            Authh f = new Authh();
+            //Вызов формы в режиме диалога
+            f.ShowDialog();
+
+            this.Close();
         }
     }
 }
