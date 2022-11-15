@@ -58,5 +58,18 @@ namespace IS1_20_BabushkinDK
 
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Сокрытие текущей формы
+            this.Hide();
+            //Инициализируем и вызываем форму сотрудники
+            Employee f = new Employee();
+            //Вызов формы в режиме диалога
+            f.ShowDialog();
+
+            this.Close();
+            Application.Exit();
+        }
     }
 }

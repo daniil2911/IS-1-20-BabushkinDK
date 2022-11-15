@@ -73,6 +73,7 @@ namespace IS1_20_BabushkinDK
             this.button2.TabIndex = 2;
             this.button2.Text = "Сотрудники";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -194,7 +195,7 @@ namespace IS1_20_BabushkinDK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 414);
+            this.ClientSize = new System.Drawing.Size(595, 413);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
