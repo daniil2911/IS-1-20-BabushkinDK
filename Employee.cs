@@ -25,17 +25,10 @@ namespace IS1_20_BabushkinDK
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show(
-                "Вы действительно хотите выйти из сотрудников?",
-                "Завершение формы сотрудники",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-               );
-            if (dialog == DialogResult.Yes)
-            {
-                this.Close();
-                Application.Exit();
-            }
+            this.Hide();         
+            Main a = new Main();            
+            a.ShowDialog();
+            this.Close();
         }
     }
     

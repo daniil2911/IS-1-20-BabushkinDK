@@ -43,12 +43,12 @@ namespace IS1_20_BabushkinDK
             else
             {
                 //Закрываем форму
-                this.Close();
+                Application.Exit();
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
+        {            
             //Сокрытие текущей формы
             this.Hide();
             //Инициализируем и вызываем форму диалога авторизации
@@ -67,9 +67,7 @@ namespace IS1_20_BabushkinDK
             Employee f = new Employee();
             //Вызов формы в режиме диалога
             f.ShowDialog();
-
-            this.Close();
-            Application.Exit();
+            this.Close();            
         }
     }
 }

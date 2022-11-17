@@ -55,7 +55,7 @@ namespace IS1_20_BabushkinDK
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(121, 63);
+            this.metroTextBox1.Location = new System.Drawing.Point(94, 64);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -64,7 +64,7 @@ namespace IS1_20_BabushkinDK
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(205, 23);
+            this.metroTextBox1.Size = new System.Drawing.Size(240, 23);
             this.metroTextBox1.TabIndex = 0;
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -85,7 +85,7 @@ namespace IS1_20_BabushkinDK
             this.metroTextBox2.CustomButton.UseSelectable = true;
             this.metroTextBox2.CustomButton.Visible = false;
             this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(121, 106);
+            this.metroTextBox2.Location = new System.Drawing.Point(94, 106);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.PasswordChar = '•';
@@ -94,7 +94,7 @@ namespace IS1_20_BabushkinDK
             this.metroTextBox2.SelectionLength = 0;
             this.metroTextBox2.SelectionStart = 0;
             this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(205, 23);
+            this.metroTextBox2.Size = new System.Drawing.Size(240, 23);
             this.metroTextBox2.TabIndex = 1;
             this.metroTextBox2.UseSelectable = true;
             this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -113,7 +113,7 @@ namespace IS1_20_BabushkinDK
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(178, 149);
+            this.metroButton2.Location = new System.Drawing.Point(186, 149);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(148, 36);
             this.metroButton2.TabIndex = 3;
@@ -125,21 +125,23 @@ namespace IS1_20_BabushkinDK
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(39, 62);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(19, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 24);
+            this.label1.Size = new System.Drawing.Size(69, 24);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Логин";
+            this.label1.Text = "Логин:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(39, 106);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(7, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 24);
+            this.label2.Size = new System.Drawing.Size(81, 24);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Пароль";
+            this.label2.Text = "Пароль:";
             // 
             // pictureBox1
             // 
@@ -155,7 +157,7 @@ namespace IS1_20_BabushkinDK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 192);
+            this.ClientSize = new System.Drawing.Size(337, 192);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -163,9 +165,11 @@ namespace IS1_20_BabushkinDK
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroTextBox1);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "Authh";
             this.Text = "Авторизация";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.Authh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
