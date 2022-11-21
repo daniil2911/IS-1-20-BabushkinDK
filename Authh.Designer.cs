@@ -46,7 +46,7 @@ namespace IS1_20_BabushkinDK
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(183, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(218, 1);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -76,7 +76,7 @@ namespace IS1_20_BabushkinDK
             // 
             // 
             this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(183, 1);
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(218, 1);
             this.metroTextBox2.CustomButton.Name = "";
             this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;

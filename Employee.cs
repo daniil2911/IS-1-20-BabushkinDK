@@ -4,10 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace IS1_20_BabushkinDK
 {
@@ -28,6 +32,21 @@ namespace IS1_20_BabushkinDK
         //Переменная для ID записи в БД, выбранной в гриде. Пока она не содердит значения, лучше его инициализировать с 0
         //что бы в БД не отправлялся null
         string id_selected_rows = "0";
+
+        static string sha256(string randomString)
+        {
+            //Тут происходит криптографическая магия. Смысл данного метода заключается в том, что строка залетает в метод
+            var crypt = new System.Security.Cryptography.SHA256Managed();
+            var hash = new System.Text.StringBuilder();
+            byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(randomString));
+            foreach (byte theByte in crypto)
+            {
+                hash.Append(theByte.ToString("x2"));
+            }
+            return hash.ToString();
+        }
+
+
         public Employee()
         {
             InitializeComponent();
@@ -36,8 +55,8 @@ namespace IS1_20_BabushkinDK
         private void Employee_Load(object sender, EventArgs e)
         {
             // строка подключения к БД
-            //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
-            string connStr = "server=10.90.12.110;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
+            string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
+            //string connStr = "server=10.90.12.110;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
             // создаём объект для подключения к БД
             conn = new MySqlConnection(connStr);
             //Вызываем метод для заполнение дата Грида
@@ -66,9 +85,9 @@ namespace IS1_20_BabushkinDK
             //Убираем заголовки строк
             dataGridView1.RowHeadersVisible = false;
             //Показываем заголовки столбцов
-            dataGridView1.ColumnHeadersVisible = true;            
+            dataGridView1.ColumnHeadersVisible = true;
         }
-        
+
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -181,6 +200,24 @@ namespace IS1_20_BabushkinDK
                 //Метод получения ID выделенной строки в глобальную переменную
                 GetSelectedIDString();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string fio = metroTextBox1.Text;
+            string phone = metroTextBox4.Text;
+            string login = metroTextBox5.Text;
+            string password = sha256(metroTextBox6.Text);
+            string email = metroTextBox7.Text;
+            string has_accepted = metroTextBox8.Text;
+            string passport = metroTextBox9.Text;
+
+            string sql = $"INSERT INTO T_Empl(fio_empl, phone_empl, email_empl, passport_empl, has_accepted,login, password)" + $"VALUES( '{fio}','{phone}', `{login}`, `{password}`, `{email}`, `{has_accepted}`,`{passport}`)";
+            conn.Open();
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            command.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Добавление успешно");
         }
     }
 }
