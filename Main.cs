@@ -14,6 +14,7 @@ namespace IS1_20_BabushkinDK
 {
     public partial class Main : MetroFramework.Forms.MetroForm
     {
+        private Form currentChildForm;
         public Main()
         {
             InitializeComponent();
@@ -48,14 +49,13 @@ namespace IS1_20_BabushkinDK
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {            
+        {
             //Сокрытие текущей формы
             this.Hide();
             //Инициализируем и вызываем форму диалога авторизации
             Authh f = new Authh();
             //Вызов формы в режиме диалога
             f.ShowDialog();
-
             this.Close();
         }
 
@@ -67,7 +67,23 @@ namespace IS1_20_BabushkinDK
             Employee f = new Employee();
             //Вызов формы в режиме диалога
             f.ShowDialog();
-            this.Close();            
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Сокрытие текущей формы
+            this.Hide();
+            //Инициализируем и вызываем форму сотрудники
+            Ingredients f = new Ingredients();
+            //Вызов формы в режиме диалога
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
