@@ -49,13 +49,8 @@ namespace IS1_20_BabushkinDK
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Сокрытие текущей формы
-            this.Hide();
-            //Инициализируем и вызываем форму диалога авторизации
-            Authh f = new Authh();
-            //Вызов формы в режиме диалога
-            f.ShowDialog();
-            
+            this.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -71,8 +66,8 @@ namespace IS1_20_BabushkinDK
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Сокрытие текущей формы
-            this.Hide();
+            ////Сокрытие текущей формы
+            //this.Hide();
             //Инициализируем и вызываем форму сотрудники
             Ingredients f = new Ingredients();
             //Вызов формы в режиме диалога
@@ -80,6 +75,10 @@ namespace IS1_20_BabushkinDK
             
         }
 
-       
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Add add = new Add();
+            add.ShowDialog();
+        }
     }
 }

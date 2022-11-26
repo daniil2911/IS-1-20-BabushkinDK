@@ -57,10 +57,12 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.label2 = new System.Windows.Forms.Label();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTextBox1
@@ -136,7 +138,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(682, 92);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 35);
+            this.button3.Size = new System.Drawing.Size(169, 44);
             this.button3.TabIndex = 5;
             this.button3.Text = "Очистить ";
             this.button3.UseVisualStyleBackColor = true;
@@ -291,7 +293,6 @@
             this.metroTextBox6.UseSelectable = true;
             this.metroTextBox6.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox6.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-
             // 
             // label7
             // 
@@ -492,11 +493,22 @@
             this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(612, 95);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(59, 41);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 29;
+            this.pictureBox3.TabStop = false;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 572);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.metroTextBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.metroTextBox9);
@@ -529,6 +541,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,5 +576,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
