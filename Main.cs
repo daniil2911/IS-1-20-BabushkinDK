@@ -14,7 +14,7 @@ namespace IS1_20_BabushkinDK
 {
     public partial class Main : MetroFramework.Forms.MetroForm
     {
-        private Form currentChildForm;
+        
         public Main()
         {
             InitializeComponent();
@@ -33,12 +33,11 @@ namespace IS1_20_BabushkinDK
             {
                 //Отображаем рабочую форму
                 this.Show();
-                //Вытаскиваем из класса поля в label'ы
-                metroLabel1.ForeColor = Color.GreenYellow;
+                //Вытаскиваем из класса поля в label'ы                
                 metroLabel1.Text = Auth.auth_id;
                 metroLabel1.Text = Auth.auth_fio;
                 metroLabel1.Text = $"Здравствуйте, {Auth.auth_fio}";
-                //Красим текст в label в зелёный цвет
+               
             }
             //иначе
             else
@@ -56,18 +55,18 @@ namespace IS1_20_BabushkinDK
             Authh f = new Authh();
             //Вызов формы в режиме диалога
             f.ShowDialog();
-            this.Close();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Сокрытие текущей формы
-            this.Hide();
+            ////Сокрытие текущей формы
+            //this.Hide();
             //Инициализируем и вызываем форму сотрудники
             Employee f = new Employee();
             //Вызов формы в режиме диалога
             f.ShowDialog();
-            this.Close();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,12 +77,9 @@ namespace IS1_20_BabushkinDK
             Ingredients f = new Ingredients();
             //Вызов формы в режиме диалога
             f.ShowDialog();
-            this.Close();
+            
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-           
-        }
+       
     }
 }

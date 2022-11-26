@@ -14,8 +14,8 @@ namespace IS1_20_BabushkinDK
     public partial class Authh : MetroFramework.Forms.MetroForm
     {
         // строка подключения к БД
-        string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
-        //string connStr = "server=10.90.12.110;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
+        //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
+        string connStr = "server=10.90.12.110;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
         //Переменная соединения
         MySqlConnection conn;
         //Логин и пароль к данной фKulacovSEорме Вы сможете посмотреть в БД db_test таблице t_user

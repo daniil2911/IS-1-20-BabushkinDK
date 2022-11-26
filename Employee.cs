@@ -55,8 +55,8 @@ namespace IS1_20_BabushkinDK
         private void Employee_Load(object sender, EventArgs e)
         {
             // строка подключения к БД
-            string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
-            //string connStr = "server=10.90.12.110;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
+            //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
+            string connStr = "server=10.90.12.110;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
             // создаём объект для подключения к БД
             conn = new MySqlConnection(connStr);
             //Вызываем метод для заполнение дата Грида
@@ -90,9 +90,7 @@ namespace IS1_20_BabushkinDK
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Main a = new Main();
-            a.ShowDialog();
+           
             this.Close();
         }
 
@@ -127,7 +125,7 @@ namespace IS1_20_BabushkinDK
         //public void DeleteUser()
         //{
         //    //Формируем строку запроса на добавление строк
-        //    string sql_delete_user = "DELETE FROM t_stud WHERE id='" + id_selected_rows + "'";
+        //    string sql_delete_user = "DELETE FROM t_Empl WHERE id_emlp='" + id_selected_rows + "'";
         //    //Посылаем запрос на обновление данных
         //    MySqlCommand delete_user = new MySqlCommand(sql_delete_user, conn);
         //    try
@@ -205,22 +203,34 @@ namespace IS1_20_BabushkinDK
         private void button1_Click(object sender, EventArgs e)
         {
             string fio = metroTextBox1.Text;
-            string phone = metroTextBox4.Text;
-            string login = metroTextBox5.Text;
-            string password = sha256(metroTextBox6.Text);
-            string email = metroTextBox7.Text;
-            string has_accepted = metroTextBox8.Text;
-            string passport = metroTextBox9.Text;
+            string phone = metroTextBox2.Text;
+            string email = metroTextBox5.Text;
+            string passport = metroTextBox6.Text;
+            string has_accepted = metroTextBox7.Text;
+            string login = metroTextBox8.Text;
+            string password = sha256(metroTextBox9.Text);
 
-            string sql = $"INSERT INTO T_Empl(fio_empl, phone_empl, email_empl, passport_empl, has_accepted,login, password)" + $"VALUES( '{fio}','{phone}', `{login}`, `{password}`, `{email}`, `{has_accepted}`,`{passport}`)";
+            string sql = $"INSERT INTO T_Empl(fio_empl, phone_empl, email_empl, passport_empl, has_accepted, login, PASSWORD)" + $"VALUES('{fio}','{phone}','{email}','{passport}','{has_accepted}','{login}','{password}')";
             conn.Open();
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("Добавление успешно");
+            reload_list();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string id = metroTextBox3.Text;
+            string sql = $"DELETE FROM T_Empl WHERE id_empl = {id}";
+            conn.Open();
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            command.ExecuteNonQuery();
+            conn.Close();        
+            reload_list();
         }
     }
 }
+ 
 
 
 
